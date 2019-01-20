@@ -23,7 +23,6 @@ fi
 eval "git clone $LIT_REPO ${HOME}/lit"
 eval "sudo chown -R $(whoami) ${HOME}/lit"
 
-sudo tr -d '\r' < ${HOME}/lit/lit.sh > /usr/local/bin/lit
 OS=$(uname_os)
 
 if [[ $(uname_os) = "windows" ]]; then 
@@ -31,3 +30,5 @@ if [[ $(uname_os) = "windows" ]]; then
 	eval "cp ${HOME}/lit/lit.bat C:\bin\lit.bat"
 	exit
 fi
+
+sh ${HOME}/lit/lit.sh --update
