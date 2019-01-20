@@ -22,6 +22,7 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 fi
 
 eval "git clone $LIT_REPO ~/lit"
+eval "cd ~/lit"
 OS=$(uname_os)
 
 if [[ $OS = "windows" ]]; then 
