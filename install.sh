@@ -22,8 +22,8 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 fi
 
 eval "git clone $LIT_REPO ~/lit"
-eval "cd ~/lit"
-eval "git remote set-url origin $SSH_LIT_REPO"
+eval "chown -R $(whoami) ~/lit"
+
 OS=$(uname_os)
 
 if [[ $OS = "windows" ]]; then 
