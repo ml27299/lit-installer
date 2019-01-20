@@ -26,12 +26,6 @@ eval "sudo chown -R $(whoami) ${HOME}/lit"
 tr -d '\r'  < ${HOME}/lit/lit.sh > ${HOME}/lit/lit.sh
 OS=$(uname_os)
 
-if [[ $OS = "windows" ]]; then 
-	eval "cp ${HOME}/lit/lit.sh C:\bin\lit.sh"
-	eval "cp ${HOME}/lit/lit.bat C:\bin\lit.bat"
-	exit
-fi
-
 if [[ $(uname_os) = "windows" ]]; then 
 	eval "cp ${HOME}/lit/lit.sh C:\bin\lit.sh"
 	eval "cp ${HOME}/lit/lit.bat C:\bin\lit.bat"
