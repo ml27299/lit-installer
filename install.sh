@@ -22,7 +22,7 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 fi
 
 eval "git clone $LIT_REPO ~/lit"
-eval "chown -R $(whoami) ~/lit"
+eval "sudo chown -R $(whoami) ~/lit"
 
 OS=$(uname_os)
 
