@@ -31,5 +31,3 @@ if [[ $(uname_os) = "windows" ]]; then
 	eval "cp ${HOME}/lit/lit.bat C:\bin\lit.bat"
 	exit
 fi
-
-eval "sudo cp ${HOME}/lit/lit.sh /usr/local/bin/lit"
