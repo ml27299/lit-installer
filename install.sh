@@ -1,7 +1,6 @@
 #!/bin/bash
 
 LIT_REPO="https://github.com/ml27299/lit-cli.git"
-SSH_LIT_REPO="git@github.com:ml27299/lit-cli.git"
 
 uname_os() {
   os=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -22,9 +21,6 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 fi
 
 eval "git clone $LIT_REPO ~/lit"
-eval "sudo chown -R $(whoami) ~/lit"
-eval "sudo chown -R $(whoami) ~/lit/.git"
-
 OS=$(uname_os)
 
 if [[ $OS = "windows" ]]; then 
