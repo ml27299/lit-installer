@@ -33,4 +33,4 @@ if [[ $OS = "windows" ]]; then
 	exit
 fi
 
-eval "cp ~/lit/lit.sh /usr/local/bin/lit"
+eval "sudo cp ~/lit/lit.sh /usr/local/bin/lit"
