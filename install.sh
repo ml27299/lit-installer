@@ -23,7 +23,8 @@ fi
 eval "git clone $LIT_REPO ${HOME}/lit"
 eval "sudo chown -R $(whoami) ${HOME}/lit"
 
-eval "tr -d '\r'"  < "${HOME}/lit/lit.sh" > "${HOME}/lit/lit.sh"
+tr -d '\r' < ${HOME}/lit/lit.sh > ${HOME}/lit/_lit.sh
+echo "yo"
 eval "chmod u+x ${HOME}/lit/lit.sh"
 
 OS=$(uname_os)
