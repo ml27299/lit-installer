@@ -23,9 +23,7 @@ fi
 eval "git clone $LIT_REPO ${HOME}/lit"
 eval "sudo chown -R $(whoami) ${HOME}/lit"
 
-tr -d '\r' < ${HOME}/lit/lit.sh > ${HOME}/lit/lit.sh
-eval "chmod u+x ${HOME}/lit/lit.sh"
-
+sudo tr -d '\r' < ${HOME}/lit/lit.sh > /usr/local/bin/lit
 OS=$(uname_os)
 
 if [[ $(uname_os) = "windows" ]]; then 
