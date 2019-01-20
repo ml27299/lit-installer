@@ -32,4 +32,4 @@ if [[ $OS = "windows" ]]; then
 	exit
 fi
 
-eval "${HOME}/lit/lit.sh --update"
+eval "sudo ${HOME}/lit/lit.sh --update"
