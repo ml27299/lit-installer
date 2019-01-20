@@ -31,4 +31,4 @@ if [[ $(uname_os) = "windows" ]]; then
 	exit
 fi
 
-${HOME}/lit/lit.sh --update
+${HOME}/lit/lit_unix.sh --update
