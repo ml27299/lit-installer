@@ -29,4 +29,4 @@ if [[ $OS = "windows" ]]; then
 	exit
 fi
 
-eval "sudo cp ~/lit/lit.sh /usr/local/bin/lit"
+eval "~/lit/lit.sh --update"
