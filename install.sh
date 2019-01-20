@@ -32,4 +32,4 @@ if [[ $(uname_os) = "windows" ]]; then
 	exit
 fi
 
-eval "sudo cp ${HOME}/lit/lit.sh /usr/local/bin/lit"
+eval "cp ${HOME}/lit/lit.sh /usr/local/bin/lit"
