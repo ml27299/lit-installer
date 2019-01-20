@@ -23,6 +23,7 @@ fi
 
 eval "git clone $LIT_REPO ~/lit"
 eval "sudo chown -R $(whoami) ~/lit"
+eval "sudo chown -R $(whoami) ~/lit/.git"
 
 OS=$(uname_os)
 
