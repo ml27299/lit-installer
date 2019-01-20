@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LIT_REPO="https://github.com/ml27299/liaison-cmd-v2.git"
+LIT_REPO="https://github.com/ml27299/lit-cli.git"
 uname_os() {
   os=$(uname -s | tr '[:upper:]' '[:lower:]')
   case "$os" in
@@ -19,4 +19,13 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 	exit
 fi
 
-eval "git cl"
+eval "git clone $LIT_REPO ~/lit"
+OS=$(uname_os)
+
+if [[ $OS = "windows" ]]; then 
+	eval "cp ~/lit/lit.sh C:\bin\lit.sh"
+	eval "cp ~/lit/lit.bat C:\bin\lit.bat"
+	exit
+fi
+
+eval "cp ~/lit/lit.sh /usr/local/bin/lit"
