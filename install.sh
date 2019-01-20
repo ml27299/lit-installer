@@ -23,6 +23,7 @@ fi
 
 eval "git clone $LIT_REPO ~/lit"
 eval "cd ~/lit"
+eval "git remote set-url origin $SSH_LIT_REPO"
 OS=$(uname_os)
 
 if [[ $OS = "windows" ]]; then 
