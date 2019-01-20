@@ -20,15 +20,15 @@ if [[ $(isGitAuthorized) = "false" ]]; then
 	exit
 fi
 
-eval "git clone $LIT_REPO ~/lit"
-eval "sudo chown -R $(whoami) ~/lit"
+eval "git clone $LIT_REPO ${HOME}/lit"
+eval "sudo chown -R $(whoami) ${HOME}/lit"
 
 OS=$(uname_os)
 
 if [[ $OS = "windows" ]]; then 
-	eval "cp ~/lit/lit.sh C:\bin\lit.sh"
-	eval "cp ~/lit/lit.bat C:\bin\lit.bat"
+	eval "cp ${HOME}/lit/lit.sh C:\bin\lit.sh"
+	eval "cp ${HOME}/lit/lit.bat C:\bin\lit.bat"
 	exit
 fi
 
-eval "~/lit/lit.sh --update"
+eval "${HOME}/lit/lit.sh --update"
