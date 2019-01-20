@@ -24,7 +24,8 @@ eval "git clone $LIT_REPO ${HOME}/lit"
 eval "sudo chown -R $(whoami) ${HOME}/lit"
 
 eval "tr -d '\r'"  < "${HOME}/lit/lit.sh" > "${HOME}/lit/lit.sh"
-echo "yo"
+eval "chmod u+x ${HOME}/lit/lit.sh"
+
 OS=$(uname_os)
 
 if [[ $(uname_os) = "windows" ]]; then 
@@ -33,4 +34,4 @@ if [[ $(uname_os) = "windows" ]]; then
 	exit
 fi
 
-eval "cp ${HOME}/lit/lit.sh /usr/local/bin/lit"
+eval "sudo cp ${HOME}/lit/lit.sh /usr/local/bin"
